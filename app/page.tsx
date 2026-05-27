@@ -1,37 +1,55 @@
 "use client";
 
+import { useState } from "react";
+
 export default function Home() {
+  const [selectedService, setSelectedService] = useState(null);
+
   const services = [
     {
       title: "Point Relais",
       description:
         "Réception et retrait de colis Chronopost, Mondial Relay et particuliers.",
       icon: "📦",
+      details:
+        "Vous pouvez commander vos colis sur Amazon, Vinted, Leboncoin ou n’importe quelle enseigne et mettre notre adresse comme point relais. Vos colis seront directement réceptionnés chez nous puis conservés jusqu’à votre récupération. Nous acceptons les colis Chronopost, Mondial Relay ainsi que les envois entre particuliers. Des frais de garde de 0,50€ à 1€ peuvent être appliqués selon la taille du colis lors du retrait.",
     },
+
     {
       title: "Livraison à domicile",
       description:
         "Livraison rapide de vos colis directement chez vous.",
       icon: "🚚",
+      details:
+        "Nous pouvons livrer vos colis directement à domicile si vous ne pouvez pas vous déplacer jusqu’au point relais. Les frais de déplacement varient entre 5€ et 10€ selon la distance. Un supplément de 10€ peut être demandé pour les colis très lourds ou encombrants comme l’électroménager ou les réfrigérateurs.",
     },
+
     {
       title: "Courses & Pharmacie",
       description:
         "Récupération de drives, courses et médicaments.",
       icon: "🛒",
+      details:
+        "Nous récupérons vos courses en drive, vos médicaments en pharmacie, vos fleurs ou tout autre achat en magasin. Il suffit de nous transmettre les informations nécessaires ainsi qu’une autorisation de retrait si besoin. Nous récupérons ensuite vos commandes et les livrons directement chez vous. Les frais varient de 5€ à 10€ selon les kilomètres et le volume des courses. Un supplément peut être ajouté si nous devons effectuer les achats à votre place.",
     },
+
     {
       title: "Service Leboncoin",
       description:
         "Nous récupérons vos achats à votre place et vous les livrons.",
       icon: "🤝",
+      details:
+        "Vous avez acheté un article sur Leboncoin mais vous ne pouvez pas vous déplacer ? Nous pouvons nous rendre sur place à votre place, récupérer votre achat puis vous le livrer directement. Ce service fonctionne également pour les personnes timides ou indisponibles. Les frais varient entre 5€ et 15€ selon la distance avec un supplément possible pour les objets lourds ou encombrants.",
     },
+
     {
-  title: "Envoi Outre-mer",
-  description:
-    "Nous réceptionnons vos colis et achats en métropole puis nous les expédions vers les DOM-TOM et l’outre-mer.",
-  icon: "✈️",
-},
+      title: "Envoi Outre-mer",
+      description:
+        "Réception et expédition de colis vers les DOM-TOM.",
+      icon: "✈️",
+      details:
+        "Nous réceptionnons vos colis Amazon, Vinted ou autres directement à notre point relais puis nous les réexpédions vers les DOM-TOM et l’outre-mer. Nous pouvons également vous aider à effectuer les déclarations de douane et vous fournir un devis avant l’envoi. Les frais d’expédition de La Poste restent à la charge du client selon le poids du colis. Nous appliquons uniquement des frais de déplacement entre 10€ et 15€ selon le nombre de colis ou leur volume. Si l’envoi coûte moins cher que prévu, nous remboursons la différence afin de garantir un service honnête et transparent.",
+    },
   ];
 
   return (
@@ -39,9 +57,11 @@ export default function Home() {
 
       {/* HERO */}
       <section className="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20 px-6">
+
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
           <div>
+
             <h1 className="text-5xl font-black leading-tight mb-6">
               DK EXPRESS 26
             </h1>
@@ -52,6 +72,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap gap-4">
+
               <button className="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-2xl font-bold shadow-lg">
                 Commander une livraison
               </button>
@@ -59,22 +80,28 @@ export default function Home() {
               <button className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-blue-700 transition">
                 Nous contacter
               </button>
+
             </div>
+
           </div>
 
           <div className="bg-white rounded-3xl p-6 shadow-2xl">
+
             <img
               src="/logo.png"
               alt="DK Express 26"
               className="rounded-2xl"
             />
+
           </div>
 
         </div>
+
       </section>
 
       {/* SERVICES */}
       <section className="py-20 px-6">
+
         <div className="max-w-6xl mx-auto text-center mb-14">
 
           <h2 className="text-4xl font-black mb-4">
@@ -87,13 +114,16 @@ export default function Home() {
 
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-6">
 
           {services.map((service, index) => (
+
             <div
               key={index}
-              className="bg-gray-50 rounded-3xl p-6 shadow hover:shadow-xl transition"
+              onClick={() => setSelectedService(service)}
+              className="bg-gray-50 rounded-3xl p-6 shadow hover:shadow-xl transition cursor-pointer"
             >
+
               <div className="text-5xl mb-4">
                 {service.icon}
               </div>
@@ -105,10 +135,13 @@ export default function Home() {
               <p className="text-gray-600">
                 {service.description}
               </p>
+
             </div>
+
           ))}
 
         </div>
+
       </section>
 
       {/* FORMULAIRE */}
@@ -168,6 +201,7 @@ export default function Home() {
           </form>
 
         </div>
+
       </section>
 
       {/* GOOGLE MAPS */}
@@ -195,6 +229,38 @@ export default function Home() {
         </div>
 
       </section>
+
+      {/* POPUP */}
+      {selectedService && (
+
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+
+          <div className="bg-white p-8 rounded-3xl max-w-2xl w-full relative shadow-2xl max-h-[90vh] overflow-y-auto">
+
+            <button
+              onClick={() => setSelectedService(null)}
+              className="absolute top-4 right-4 text-2xl"
+            >
+              ✕
+            </button>
+
+            <div className="text-6xl mb-4">
+              {selectedService.icon}
+            </div>
+
+            <h2 className="text-3xl font-black mb-4 text-blue-700">
+              {selectedService.title}
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed">
+              {selectedService.details}
+            </p>
+
+          </div>
+
+        </div>
+
+      )}
 
     </div>
   );
