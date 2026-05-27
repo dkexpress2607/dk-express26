@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function Home() {
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState<any>(null);
 
   const services = [
     {
@@ -121,7 +121,7 @@ export default function Home() {
             <div
               key={index}
               onClick={() => setSelectedService(service)}
-
+              className="bg-gray-50 rounded-3xl p-6 shadow hover:shadow-xl transition cursor-pointer hover:scale-105"
             >
 
               <div className="text-5xl mb-4">
