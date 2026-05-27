@@ -121,7 +121,7 @@ export default function Home() {
             <div
               key={index}
               onClick={() => setSelectedService(service)}
-              className="bg-gray-50 rounded-3xl p-6 shadow hover:shadow-xl transition cursor-pointer"
+
             >
 
               <div className="text-5xl mb-4">
