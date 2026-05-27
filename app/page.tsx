@@ -26,6 +26,12 @@ export default function Home() {
         "Nous récupérons vos achats à votre place et vous les livrons.",
       icon: "🤝",
     },
+    {
+  title: "Envoi Outre-mer",
+  description:
+    "Nous réceptionnons vos colis et achats en métropole puis nous les expédions vers les DOM-TOM et l’outre-mer.",
+  icon: "✈️",
+},
   ];
 
   return (
