@@ -80,6 +80,25 @@ export default function LegalPage() {
         </div>
 
       </div>
+      {/* FOOTER */}
+<footer className="bg-gray-100 py-6 mt-10 border-t">
+
+  <div className="max-w-6xl mx-auto px-6 text-center text-gray-600">
+
+    <p className="mb-3">
+      © 2026 DK EXPRESS 26 - Tous droits réservés
+    </p>
+
+    <a
+      href="/legal"
+      className="text-blue-700 font-semibold hover:underline"
+    >
+      Mentions légales • Conditions générales • Confidentialité
+    </a>
+
+  </div>
+
+</footer>
     </div>
   );
 }
