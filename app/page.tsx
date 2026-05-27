@@ -261,67 +261,6 @@ export default function Home() {
         </div>
 
       )}
-      {/* AVIS CLIENTS */}
-<section className="py-20 bg-gray-50">
-
-  <div className="max-w-6xl mx-auto px-6">
-
-    <h2 className="text-4xl font-black text-center mb-12 text-blue-700">
-      Avis Clients
-    </h2>
-
-    <div className="grid md:grid-cols-3 gap-6">
-
-      <div className="bg-white p-6 rounded-3xl shadow-lg">
-        <div className="text-yellow-400 text-2xl mb-4">
-          ⭐⭐⭐⭐⭐
-        </div>
-
-        <p className="text-gray-700 mb-4">
-          Service très rapide et sérieux.
-          Mon colis a été récupéré et livré sans problème.
-        </p>
-
-        <h3 className="font-bold">
-          — Sarah M.
-        </h3>
-      </div>
-
-      <div className="bg-white p-6 rounded-3xl shadow-lg">
-        <div className="text-yellow-400 text-2xl mb-4">
-          ⭐⭐⭐⭐⭐
-        </div>
-
-        <p className="text-gray-700 mb-4">
-          Très pratique pour les courses et les colis.
-          Je recommande fortement.
-        </p>
-
-        <h3 className="font-bold">
-          — Karim L.
-        </h3>
-      </div>
-
-      <div className="bg-white p-6 rounded-3xl shadow-lg">
-        <div className="text-yellow-400 text-2xl mb-4">
-          ⭐⭐⭐⭐⭐
-        </div>
-
-        <p className="text-gray-700 mb-4">
-          Super service pour l’outre-mer.
-          Expédition rapide et très professionnel.
-        </p>
-
-        <h3 className="font-bold">
-          — Melissa D.
-        </h3>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 {/* FOOTER */}
 <footer className="bg-gray-100 py-6 mt-10 border-t">
 
