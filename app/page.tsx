@@ -147,7 +147,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f4f7fb] text-gray-900 overflow-x-hidden">
+    <div className="min-h-screen w-full bg-[#f4f7fb] text-gray-900 overflow-x-hidden overflow-y-auto">
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/70 border-b border-white/20 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -189,9 +189,9 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 text-white pt-36 pb-20 px-6"
+        className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 text-white pt-36 pb-20 px-6 overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center min-h-[auto]">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -278,12 +278,12 @@ export default function Home() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="bg-white rounded-3xl p-6 shadow-2xl"
+           className="bg-white rounded-3xl p-6 shadow-2xl overflow-hidden"
           >
             <img
               src="/logo.png"
               alt="DK Express 26"
-              className="rounded-2xl"
+              className="rounded-2xl w-full h-auto object-contain"
             />
           </motion.div>
         </div>
