@@ -577,7 +577,57 @@ if (loading) {
         </div>
 
       </section>
+{/* HORAIRES */}
+<section className="py-16 bg-white px-6">
 
+  <div className="max-w-4xl mx-auto bg-gray-50 border border-gray-200 rounded-3xl p-10 shadow-xl">
+
+    <h2 className="text-4xl font-black text-center text-blue-700 mb-8">
+      Horaires d'ouverture
+    </h2>
+
+    <div className="space-y-4 text-lg text-gray-700">
+
+      <div className="flex justify-between border-b pb-3">
+        <span>Lundi</span>
+        <span className="font-semibold">08H00 - 19H00</span>
+      </div>
+
+      <div className="flex justify-between border-b pb-3">
+        <span>Mardi</span>
+        <span className="font-semibold">08H00 - 19H00</span>
+      </div>
+
+      <div className="flex justify-between border-b pb-3">
+        <span>Mercredi</span>
+        <span className="font-semibold">08H00 - 19H00</span>
+      </div>
+
+      <div className="flex justify-between border-b pb-3">
+        <span>Jeudi</span>
+        <span className="font-semibold">08H00 - 19H00</span>
+      </div>
+
+      <div className="flex justify-between border-b pb-3 text-red-600 font-bold">
+        <span>Vendredi</span>
+        <span>FERMÉ</span>
+      </div>
+
+      <div className="flex justify-between border-b pb-3">
+        <span>Samedi</span>
+        <span className="font-semibold">08H00 - 19H00</span>
+      </div>
+
+      <div className="flex justify-between">
+        <span>Dimanche</span>
+        <span className="font-semibold">08H00 - 19H00</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
      {/* FOOTER */}
 <footer
   id="contact"
