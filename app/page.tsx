@@ -181,7 +181,14 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-
+{/* IMAGE FRANCE + OUTRE-MER */}
+<div className="mt-10">
+  <img
+    src="/france-outremer.png"
+    alt="Livraison France et Outre-mer"
+    className="w-full max-w-xl rounded-3xl shadow-2xl border border-white/20"
+  />
+</div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
