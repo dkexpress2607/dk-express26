@@ -577,6 +577,112 @@ if (loading) {
         </div>
 
       </section>
+      {/* POURQUOI NOUS CHOISIR */}
+<section className="py-20 bg-gray-50 px-6">
+
+  <div className="max-w-6xl mx-auto">
+
+    <h2 className="text-5xl font-black text-center text-blue-700 mb-6">
+      Pourquoi nous choisir ?
+    </h2>
+
+    <p className="text-center text-gray-600 max-w-2xl mx-auto mb-14 text-lg">
+      DK EXPRESS 26 vous propose un service fiable, rapide et humain
+      pour simplifier vos livraisons et vos récupérations de colis.
+    </p>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+
+      {/* RAPIDE */}
+      <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 text-center hover:shadow-2xl transition">
+
+        <div className="text-5xl mb-4">
+          ⚡
+        </div>
+
+        <h3 className="text-2xl font-black text-blue-700 mb-3">
+          Rapide
+        </h3>
+
+        <p className="text-gray-600">
+          Prise en charge rapide des colis, courses et livraisons.
+        </p>
+
+      </div>
+
+      {/* LOCAL */}
+      <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 text-center hover:shadow-2xl transition">
+
+        <div className="text-5xl mb-4">
+          📍
+        </div>
+
+        <h3 className="text-2xl font-black text-blue-700 mb-3">
+          Local
+        </h3>
+
+        <p className="text-gray-600">
+          Service de proximité dans la Drôme et alentours.
+        </p>
+
+      </div>
+
+      {/* FLEXIBLE */}
+      <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 text-center hover:shadow-2xl transition">
+
+        <div className="text-5xl mb-4">
+          🔄
+        </div>
+
+        <h3 className="text-2xl font-black text-blue-700 mb-3">
+          Flexible
+        </h3>
+
+        <p className="text-gray-600">
+          Adaptation selon vos besoins, horaires et demandes.
+        </p>
+
+      </div>
+
+      {/* LIVRAISON */}
+      <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 text-center hover:shadow-2xl transition">
+
+        <div className="text-5xl mb-4">
+          🚚
+        </div>
+
+        <h3 className="text-2xl font-black text-blue-700 mb-3">
+          À domicile
+        </h3>
+
+        <p className="text-gray-600">
+          Livraison possible directement chez vous.
+        </p>
+
+      </div>
+
+      {/* ASSISTANCE */}
+      <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 text-center hover:shadow-2xl transition">
+
+        <div className="text-5xl mb-4">
+          🤝
+        </div>
+
+        <h3 className="text-2xl font-black text-blue-700 mb-3">
+          Assistance
+        </h3>
+
+        <p className="text-gray-600">
+          Accompagnement personnalisé et service humain.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 {/* HORAIRES */}
 <section className="py-16 bg-white px-6">
 
