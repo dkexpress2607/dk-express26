@@ -537,34 +537,98 @@ export default function Home() {
 
       </section>
 
-      {/* FOOTER */}
-      <footer
-        id="contact"
-        className="bg-slate-900 text-white py-10 mt-10"
+     {/* FOOTER */}
+<footer
+  id="contact"
+  className="bg-gray-100 py-10 mt-10 border-t border-gray-200"
+>
+
+  <div className="max-w-6xl mx-auto px-6 text-center text-gray-600">
+
+    <h3 className="text-2xl font-black text-blue-700 mb-3">
+      DK EXPRESS 26
+    </h3>
+
+    <p className="mb-6">
+      Service de livraison, point relais et transport local.
+    </p>
+
+    <div className="flex flex-wrap justify-center gap-6 mb-6">
+
+      <a
+        href="#accueil"
+        className="hover:text-blue-700 transition"
       >
+        Accueil
+      </a>
 
-        <div className="max-w-6xl mx-auto px-6 text-center">
+      <a
+        href="#services"
+        className="hover:text-blue-700 transition"
+      >
+        Services
+      </a>
 
-          <h3 className="text-3xl font-black mb-4">
-            DK EXPRESS 26
-          </h3>
+      <a
+        href="#tarifs"
+        className="hover:text-blue-700 transition"
+      >
+        Tarifs
+      </a>
 
-          <p className="mb-2 text-gray-300">
-            Livraison • Point relais • Services locaux
-          </p>
+      <a
+        href="#reservation"
+        className="hover:text-blue-700 transition"
+      >
+        Réservation
+      </a>
 
-          <p className="mb-6 text-gray-400">
-            dkexpress2607@gmail.com
-          </p>
+      <a
+        href="#avis"
+        className="hover:text-blue-700 transition"
+      >
+        Avis
+      </a>
 
-          <p className="text-gray-500 text-sm">
-            © 2026 DK EXPRESS 26 - Tous droits réservés
-          </p>
+    </div>
 
-        </div>
+    {/* LIENS LÉGAUX */}
+    <div className="flex flex-wrap justify-center gap-4 text-sm mb-6">
 
-      </footer>
+      <a
+        href="/legal"
+        className="text-blue-700 font-semibold hover:underline"
+      >
+        Mentions légales
+      </a>
 
+      <span>•</span>
+
+      <a
+        href="/legal"
+        className="text-blue-700 font-semibold hover:underline"
+      >
+        Conditions générales
+      </a>
+
+      <span>•</span>
+
+      <a
+        href="/legal"
+        className="text-blue-700 font-semibold hover:underline"
+      >
+        Politique de confidentialité
+      </a>
+
+    </div>
+
+    <p className="text-sm text-gray-500">
+      © 2026 DK EXPRESS 26 - Tous droits réservés
+    </p>
+
+  </div>
+
+</footer>
     </div>
   );
 }
