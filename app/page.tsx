@@ -258,7 +258,122 @@ export default function Home() {
         </div>
 
       </section>
+{/* TARIFS */}
+<section className="py-20 bg-gray-50 px-6">
 
+  <div className="max-w-6xl mx-auto">
+
+    <h2 className="text-5xl font-black text-center text-blue-700 mb-14">
+      Nos Tarifs
+    </h2>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {/* POINT RELAIS */}
+      <div className="bg-white rounded-3xl p-8 shadow-lg">
+
+        <div className="text-5xl mb-4">📦</div>
+
+        <h3 className="text-2xl font-black mb-4 text-blue-700">
+          Point Relais
+        </h3>
+
+        <ul className="space-y-3 text-gray-700">
+
+          <li>• Petit colis : 0,50€</li>
+          <li>• Grand colis : 1€</li>
+          <li>• Stockage sécurisé</li>
+          <li>• Retrait flexible</li>
+
+        </ul>
+
+      </div>
+
+      {/* LIVRAISON */}
+      <div className="bg-white rounded-3xl p-8 shadow-lg">
+
+        <div className="text-5xl mb-4">🚚</div>
+
+        <h3 className="text-2xl font-black mb-4 text-blue-700">
+          Livraison à domicile
+        </h3>
+
+        <ul className="space-y-3 text-gray-700">
+
+          <li>• Déplacement : 5€ à 10€</li>
+          <li>• Gros colis : +10€</li>
+          <li>• Livraison rapide</li>
+          <li>• Service local</li>
+
+        </ul>
+
+      </div>
+
+      {/* COURSES */}
+      <div className="bg-white rounded-3xl p-8 shadow-lg">
+
+        <div className="text-5xl mb-4">🛒</div>
+
+        <h3 className="text-2xl font-black mb-4 text-blue-700">
+          Courses & Pharmacie
+        </h3>
+
+        <ul className="space-y-3 text-gray-700">
+
+          <li>• Déplacement : 5€ à 10€</li>
+          <li>• Gros volume : +5€ à 10€</li>
+          <li>• Commande à votre place : +5€</li>
+          <li>• Livraison à domicile</li>
+
+        </ul>
+
+      </div>
+
+      {/* LEBONCOIN */}
+      <div className="bg-white rounded-3xl p-8 shadow-lg">
+
+        <div className="text-5xl mb-4">🤝</div>
+
+        <h3 className="text-2xl font-black mb-4 text-blue-700">
+          Service Leboncoin
+        </h3>
+
+        <ul className="space-y-3 text-gray-700">
+
+          <li>• Déplacement : 5€ à 15€</li>
+          <li>• Gros objet : +10€</li>
+          <li>• Livraison possible</li>
+          <li>• Service pratique</li>
+
+        </ul>
+
+      </div>
+
+      {/* OUTRE MER */}
+      <div className="bg-white rounded-3xl p-8 shadow-lg">
+
+        <div className="text-5xl mb-4">✈️</div>
+
+        <h3 className="text-2xl font-black mb-4 text-blue-700">
+          Envoi Outre-mer
+        </h3>
+
+        <ul className="space-y-3 text-gray-700">
+
+          <li>• Déplacement : 10€ à 15€</li>
+          <li>• Devis personnalisé</li>
+          <li>• Aide déclaration douane</li>
+          <li>• Frais La Poste selon poids</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
       {/* GOOGLE MAPS */}
       <section className="py-20 bg-white text-black">
 
