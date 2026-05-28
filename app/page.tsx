@@ -9,42 +9,47 @@ export default function Home() {
   const services = [
     {
       title: "Point Relais",
-      description: "Réception et retrait de colis.",
+      description:
+        "Réception et retrait de colis Chronopost, Mondial Relay et particuliers.",
       icon: "📦",
       details:
-        "Commandez vos colis Amazon, Vinted, Leboncoin et faites-les livrer chez nous.",
+        "Vous pouvez commander vos colis sur Amazon, Vinted, Leboncoin ou n’importe quelle enseigne et mettre notre adresse comme point relais.",
     },
 
     {
-      title: "Livraison",
-      description: "Livraison rapide à domicile.",
+      title: "Livraison à domicile",
+      description:
+        "Livraison rapide de vos colis directement chez vous.",
       icon: "🚚",
       details:
-        "Livraison locale rapide selon la distance et le volume.",
+        "Nous pouvons livrer vos colis directement à domicile selon la distance.",
     },
 
     {
-      title: "Courses",
-      description: "Drives, pharmacie et magasins.",
+      title: "Courses & Pharmacie",
+      description:
+        "Récupération de drives, courses et médicaments.",
       icon: "🛒",
       details:
-        "Nous récupérons vos courses et médicaments.",
+        "Nous récupérons vos courses, médicaments et achats puis nous vous les livrons.",
     },
 
     {
-      title: "Leboncoin",
-      description: "Récupération de vos achats.",
+      title: "Service Leboncoin",
+      description:
+        "Nous récupérons vos achats à votre place.",
       icon: "🤝",
       details:
-        "Nous récupérons vos achats à votre place.",
+        "Nous pouvons récupérer vos achats Leboncoin et vous les livrer.",
     },
 
     {
-      title: "Outre-mer",
-      description: "Expédition DOM-TOM.",
+      title: "Envoi Outre-mer",
+      description:
+        "Expédition vers les DOM-TOM.",
       icon: "✈️",
       details:
-        "Réexpédition de colis vers l’outre-mer.",
+        "Nous réceptionnons puis réexpédions vos colis vers l’outre-mer.",
     },
   ];
 
@@ -56,6 +61,7 @@ export default function Home() {
         "Petit colis : 0,50€",
         "Grand colis : 1€",
         "Stockage sécurisé",
+        "Retrait flexible",
       ],
     },
 
@@ -66,6 +72,7 @@ export default function Home() {
         "Déplacement : 5€ à 10€",
         "Gros colis : +10€",
         "Livraison rapide",
+        "Service local",
       ],
     },
 
@@ -76,6 +83,7 @@ export default function Home() {
         "Déplacement : 5€ à 10€",
         "Commande : +5€",
         "Livraison à domicile",
+        "Gros volume possible",
       ],
     },
 
@@ -86,6 +94,7 @@ export default function Home() {
         "Déplacement : 5€ à 15€",
         "Gros objet : +10€",
         "Livraison possible",
+        "Service pratique",
       ],
     },
 
@@ -94,172 +103,109 @@ export default function Home() {
       title: "Outre-mer",
       prices: [
         "Déplacement : 10€ à 15€",
-        "Aide douane",
         "Devis personnalisé",
+        "Aide douane",
+        "Frais La Poste selon poids",
       ],
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 scroll-smooth">
-
-      {/* NAVBAR */}
-      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/70 border-b">
-
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-
-          <h1 className="font-black text-2xl text-blue-700">
-            DK EXPRESS 26
-          </h1>
-
-          <nav className="hidden md:flex gap-6 font-semibold">
-
-            <a href="#services" className="hover:text-blue-700">
-              Services
-            </a>
-
-            <a href="#tarifs" className="hover:text-blue-700">
-              Tarifs
-            </a>
-
-            <a href="#reservation" className="hover:text-blue-700">
-              Réservation
-            </a>
-
-            <a href="#avis" className="hover:text-blue-700">
-              Avis
-            </a>
-
-          </nav>
-
-        </div>
-
-      </header>
+    <div className="min-h-screen bg-white text-gray-900">
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-700 to-blue-500 text-white pt-40 pb-28 px-6">
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20 px-6"
+      >
 
-        <div className="absolute w-96 h-96 bg-blue-300/20 rounded-full blur-3xl top-0 left-0"></div>
-
-        <div className="absolute w-96 h-96 bg-orange-300/20 rounded-full blur-3xl bottom-0 right-0"></div>
-
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
           >
 
-            <h1 className="text-6xl font-black leading-tight mb-6">
-              Livraison rapide & point relais local
+            <h1 className="text-5xl md:text-6xl font-black leading-tight mb-6">
+              DK EXPRESS 26
             </h1>
 
-            <p className="text-xl text-blue-100 mb-8">
-              DK EXPRESS 26 simplifie vos livraisons, courses et expéditions.
+            <p className="text-xl mb-6 text-blue-100">
+              Votre point relais et service de livraison local rapide,
+              fiable et pratique.
             </p>
 
             <div className="flex flex-wrap gap-4">
 
-              <motion.a
+              <motion.button
                 whileHover={{ scale: 1.05 }}
-                href="#reservation"
-                className="bg-orange-500 px-8 py-4 rounded-2xl font-bold shadow-2xl"
+                whileTap={{ scale: 0.95 }}
+                className="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-2xl font-bold shadow-lg"
               >
-                Réserver maintenant
-              </motion.a>
+                Commander une livraison
+              </motion.button>
 
-              <motion.a
+              <motion.button
                 whileHover={{ scale: 1.05 }}
-                href="#services"
-                className="border border-white px-8 py-4 rounded-2xl font-bold"
+                whileTap={{ scale: 0.95 }}
+                className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-blue-700 transition"
               >
-                Découvrir
-              </motion.a>
+                Nous contacter
+              </motion.button>
 
             </div>
 
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-white/10 backdrop-blur-xl rounded-[40px] p-8 border border-white/20 shadow-2xl"
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="bg-white rounded-3xl p-6 shadow-2xl"
           >
 
             <img
               src="/logo.png"
-              alt="logo"
-              className="rounded-3xl"
+              alt="DK Express 26"
+              className="rounded-2xl"
             />
 
           </motion.div>
 
         </div>
 
-      </section>
-
-      {/* STATS */}
-      <section className="py-16 bg-white">
-
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
-
-          {[
-            ["500+", "Colis livrés"],
-            ["100+", "Clients satisfaits"],
-            ["24h", "Livraison rapide"],
-          ].map((item, index) => (
-
-            <motion.div
-              key={index}
-              whileHover={{ y: -8 }}
-              className="bg-gray-50 rounded-3xl p-10 text-center shadow-lg"
-            >
-
-              <h3 className="text-5xl font-black text-blue-700 mb-3">
-                {item[0]}
-              </h3>
-
-              <p className="text-gray-600 text-lg">
-                {item[1]}
-              </p>
-
-            </motion.div>
-
-          ))}
-
-        </div>
-
-      </section>
+      </motion.section>
 
       {/* SERVICES */}
-      <section id="services" className="py-24 px-6 bg-gray-50">
+      <section className="py-20 px-6">
 
-        <div className="max-w-6xl mx-auto text-center mb-16">
+        <div className="max-w-6xl mx-auto text-center mb-14">
 
-          <h2 className="text-5xl font-black text-blue-700 mb-4">
+          <h2 className="text-4xl font-black mb-4">
             Nos Services
           </h2>
 
         </div>
 
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-6">
 
           {services.map((service, index) => (
 
             <motion.div
               key={index}
-              whileHover={{ y: -10, scale: 1.03 }}
               onClick={() => setSelectedService(service)}
-              className="bg-white rounded-3xl p-8 shadow-xl cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              className="bg-gray-50 rounded-3xl p-6 shadow hover:shadow-xl transition cursor-pointer"
             >
 
-              <div className="text-6xl mb-5">
+              <div className="text-5xl mb-4">
                 {service.icon}
               </div>
 
-              <h3 className="text-2xl font-black mb-3 text-blue-700">
+              <h3 className="text-2xl font-bold mb-3">
                 {service.title}
               </h3>
 
@@ -275,70 +221,161 @@ export default function Home() {
 
       </section>
 
-      {/* POURQUOI NOUS */}
-      <section className="py-24 px-6 bg-white">
+      {/* FORMULAIRE */}
+      <section className="bg-white py-20 px-6">
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-3xl mx-auto">
 
-          <h2 className="text-5xl font-black text-center text-blue-700 mb-16">
-            Pourquoi nous choisir ?
+          <h2 className="text-4xl font-bold text-center mb-10 text-blue-700">
+            Formulaire de commande
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <form
+            action="https://formsubmit.co/dkexpress2607@gmail.com"
+            method="POST"
+            className="space-y-4"
+          >
 
-            {[
-              "Livraison rapide",
-              "Service local",
-              "Tarifs accessibles",
-              "Support personnalisé",
-            ].map((item, index) => (
+            <input
+              type="text"
+              name="Nom"
+              placeholder="Votre nom"
+              className="w-full p-3 rounded-lg border text-black"
+              required
+            />
 
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                className="bg-gray-50 p-8 rounded-3xl shadow-lg text-center"
-              >
+            <input
+              type="text"
+              name="Adresse"
+              placeholder="Votre adresse"
+              className="w-full p-3 rounded-lg border text-black"
+              required
+            />
 
-                <div className="text-4xl mb-4">✅</div>
+            <input
+              type="tel"
+              name="Téléphone"
+              placeholder="Votre téléphone"
+              className="w-full p-3 rounded-lg border text-black"
+              required
+            />
 
-                <p className="font-bold text-lg">
-                  {item}
-                </p>
+            <textarea
+              name="Commande"
+              placeholder="Expliquez votre demande..."
+              className="w-full p-3 rounded-lg border text-black"
+              rows={4}
+              required
+            />
 
-              </motion.div>
+            <button
+              type="submit"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold"
+            >
+              Envoyer la demande
+            </button>
 
-            ))}
+          </form>
 
-          </div>
+        </div>
+
+      </section>
+
+      {/* RÉSERVATION RAPIDE */}
+      <section className="bg-blue-700 py-20 px-6 text-white">
+
+        <div className="max-w-3xl mx-auto">
+
+          <h2 className="text-4xl font-black text-center mb-10">
+            Réservation rapide
+          </h2>
+
+          <form
+            action="https://formsubmit.co/dkexpress2607@gmail.com"
+            method="POST"
+            className="space-y-4"
+          >
+
+            <input
+              type="text"
+              name="Nom"
+              placeholder="Votre nom"
+              className="w-full p-4 rounded-xl text-black"
+              required
+            />
+
+            <input
+              type="tel"
+              name="Téléphone"
+              placeholder="Votre téléphone"
+              className="w-full p-4 rounded-xl text-black"
+              required
+            />
+
+            <select
+              name="Service"
+              className="w-full p-4 rounded-xl text-black"
+              required
+            >
+              <option value="">Choisissez un service</option>
+              <option>Point Relais</option>
+              <option>Livraison à domicile</option>
+              <option>Courses & Pharmacie</option>
+              <option>Service Leboncoin</option>
+              <option>Envoi Outre-mer</option>
+            </select>
+
+            <input
+              type="date"
+              name="Date"
+              className="w-full p-4 rounded-xl text-black"
+              required
+            />
+
+            <textarea
+              name="Message"
+              placeholder="Précisions supplémentaires..."
+              className="w-full p-4 rounded-xl text-black"
+              rows={4}
+            />
+
+            <button
+              type="submit"
+              className="w-full bg-orange-500 hover:bg-orange-600 transition py-4 rounded-xl font-bold text-lg"
+            >
+              Réserver maintenant
+            </button>
+
+          </form>
 
         </div>
 
       </section>
 
       {/* TARIFS */}
-      <section id="tarifs" className="py-24 bg-gray-50 px-6">
+      <section className="py-20 bg-gray-50 px-6">
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
 
-          <h2 className="text-5xl font-black text-center text-blue-700 mb-16">
+          <h2 className="text-5xl font-black text-center text-blue-700 mb-14">
             Nos Tarifs
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {tarifs.map((item, index) => (
 
               <motion.div
                 key={index}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-3xl p-8 shadow-xl"
+                className="bg-white rounded-3xl p-8 shadow-lg"
               >
 
-                <div className="text-5xl mb-5">
+                <div className="text-5xl mb-4">
                   {item.icon}
                 </div>
 
-                <h3 className="text-2xl font-black mb-5 text-blue-700">
+                <h3 className="text-2xl font-black mb-4 text-blue-700">
                   {item.title}
                 </h3>
 
@@ -360,87 +397,25 @@ export default function Home() {
 
       </section>
 
-      {/* RESERVATION */}
-      <section
-        id="reservation"
-        className="py-24 px-6 bg-gradient-to-r from-blue-700 to-blue-500 text-white"
-      >
+      {/* GOOGLE MAPS */}
+      <section className="py-20 bg-white text-black">
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-5xl font-black text-center mb-12">
-            Réservation rapide
+          <h2 className="text-4xl font-bold mb-8 text-center">
+            Notre localisation
           </h2>
 
-          <form
-            action="https://formsubmit.co/dkexpress2607@gmail.com"
-            method="POST"
-            className="space-y-5"
-          >
+          <div className="rounded-2xl overflow-hidden shadow-lg">
 
-            <input
-              type="text"
-              placeholder="Votre nom"
-              className="w-full p-4 rounded-2xl text-black"
-              required
-            />
-
-            <input
-              type="tel"
-              placeholder="Téléphone"
-              className="w-full p-4 rounded-2xl text-black"
-              required
-            />
-
-            <textarea
-              placeholder="Votre demande..."
-              rows={5}
-              className="w-full p-4 rounded-2xl text-black"
-            />
-
-            <button
-              type="submit"
-              className="w-full bg-orange-500 py-4 rounded-2xl font-black text-lg hover:bg-orange-600 transition"
-            >
-              Envoyer la demande
-            </button>
-
-          </form>
-
-        </div>
-
-      </section>
-
-      {/* AVIS */}
-      <section id="avis" className="py-24 px-6 bg-white">
-
-        <div className="max-w-6xl mx-auto">
-
-          <h2 className="text-5xl font-black text-center text-blue-700 mb-16">
-            Avis Clients
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-
-            {[
-              "Service rapide et sérieux ⭐⭐⭐⭐⭐",
-              "Livraison parfaite ⭐⭐⭐⭐⭐",
-              "Très pratique au quotidien ⭐⭐⭐⭐⭐",
-            ].map((avis, index) => (
-
-              <motion.div
-                key={index}
-                whileHover={{ y: -10 }}
-                className="bg-gray-50 p-8 rounded-3xl shadow-lg"
-              >
-
-                <p className="text-gray-700 text-lg">
-                  {avis}
-                </p>
-
-              </motion.div>
-
-            ))}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2837.828889993852!2d4.788405699999996!3d44.66184750000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b54138c9012adf%3A0xce1f2b89eb19e8fa!2s6%20chemin%20therese%20caillet%2C%2026740%20Les%20Tourrettes!5e0!3m2!1sfr!2sfr!4v1779866110753!5m2!1sfr!2sfr"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
 
           </div>
 
@@ -448,49 +423,15 @@ export default function Home() {
 
       </section>
 
-      {/* HORAIRES */}
-      <section className="py-20 bg-gray-50 text-center px-6">
-
-        <h2 className="text-5xl font-black text-blue-700 mb-10">
-          Horaires
-        </h2>
-
-        <p className="text-xl text-gray-700">
-          Lundi - Samedi : 8h00 - 20h00
-        </p>
-
-      </section>
-
-      {/* FOOTER */}
-      <footer className="bg-black text-white py-10">
-
-        <div className="max-w-6xl mx-auto px-6 text-center">
-
-          <h3 className="text-3xl font-black mb-4">
-            DK EXPRESS 26
-          </h3>
-
-          <p className="text-gray-400 mb-4">
-            Livraison • Point relais • Courses • Outre-mer
-          </p>
-
-          <p className="text-gray-500 text-sm">
-            © 2026 DK EXPRESS 26 - Tous droits réservés
-          </p>
-
-        </div>
-
-      </footer>
-
       {/* POPUP */}
       {selectedService && (
 
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
 
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-white rounded-3xl p-8 max-w-2xl w-full relative shadow-2xl"
+            className="bg-white p-8 rounded-3xl max-w-2xl w-full relative shadow-2xl"
           >
 
             <button
@@ -500,15 +441,15 @@ export default function Home() {
               ✕
             </button>
 
-            <div className="text-6xl mb-5">
+            <div className="text-6xl mb-4">
               {selectedService.icon}
             </div>
 
-            <h2 className="text-4xl font-black text-blue-700 mb-5">
+            <h2 className="text-3xl font-black mb-4 text-blue-700">
               {selectedService.title}
             </h2>
 
-            <p className="text-gray-700 text-lg leading-relaxed">
+            <p className="text-gray-700 leading-relaxed">
               {selectedService.details}
             </p>
 
@@ -517,6 +458,51 @@ export default function Home() {
         </div>
 
       )}
+
+      {/* AVIS CLIENTS */}
+      <section className="py-20 bg-gray-50">
+
+        <div className="max-w-6xl mx-auto px-6">
+
+          <h2 className="text-5xl font-black text-center text-blue-700 mb-14">
+            Avis Clients
+          </h2>
+
+          <div className="text-center">
+
+            <a
+              href="https://maps.app.goo.gl/zyrhRQWwGUW8icj68"
+              target="_blank"
+              className="bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-800 transition"
+            >
+              Laisser un avis Google
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-gray-100 py-6 mt-10 border-t">
+
+        <div className="max-w-6xl mx-auto px-6 text-center text-gray-600">
+
+          <p className="mb-3">
+            © 2026 DK EXPRESS 26 - Tous droits réservés
+          </p>
+
+          <a
+            href="/legal"
+            className="text-blue-700 font-semibold hover:underline"
+          >
+            Mentions légales • Conditions générales • Confidentialité
+          </a>
+
+        </div>
+
+      </footer>
 
     </div>
   );
