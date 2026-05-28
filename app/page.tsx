@@ -1,3 +1,4 @@
+```tsx
 "use client";
 
 import { useState } from "react";
@@ -204,6 +205,77 @@ export default function Home() {
 
       </section>
 
+      {/* RÉSERVATION RAPIDE */}
+      <section className="bg-blue-700 py-20 px-6 text-white">
+
+        <div className="max-w-3xl mx-auto">
+
+          <h2 className="text-4xl font-black text-center mb-10">
+            Réservation rapide
+          </h2>
+
+          <form
+            action="https://formsubmit.co/dkexpress2607@gmail.com"
+            method="POST"
+            className="space-y-4"
+          >
+
+            <input
+              type="text"
+              name="Nom"
+              placeholder="Votre nom"
+              className="w-full p-4 rounded-xl text-black"
+              required
+            />
+
+            <input
+              type="tel"
+              name="Téléphone"
+              placeholder="Votre téléphone"
+              className="w-full p-4 rounded-xl text-black"
+              required
+            />
+
+            <select
+              name="Service"
+              className="w-full p-4 rounded-xl text-black"
+              required
+            >
+              <option value="">Choisissez un service</option>
+              <option>Point Relais</option>
+              <option>Livraison à domicile</option>
+              <option>Courses & Pharmacie</option>
+              <option>Service Leboncoin</option>
+              <option>Envoi Outre-mer</option>
+            </select>
+
+            <input
+              type="date"
+              name="Date"
+              className="w-full p-4 rounded-xl text-black"
+              required
+            />
+
+            <textarea
+              name="Message"
+              placeholder="Précisions supplémentaires..."
+              className="w-full p-4 rounded-xl text-black"
+              rows={4}
+            />
+
+            <button
+              type="submit"
+              className="w-full bg-orange-500 hover:bg-orange-600 transition py-4 rounded-xl font-bold text-lg"
+            >
+              Réserver maintenant
+            </button>
+
+          </form>
+
+        </div>
+
+      </section>
+
       {/* GOOGLE MAPS */}
       <section className="py-20 bg-white text-black">
 
@@ -310,3 +382,4 @@ export default function Home() {
     </div>
   );
 }
+```
