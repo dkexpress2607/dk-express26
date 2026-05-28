@@ -53,6 +53,63 @@ export default function Home() {
     },
   ];
 
+  const tarifs = [
+    {
+      icon: "📦",
+      title: "Point Relais",
+      prices: [
+        "Petit colis : 0,50€",
+        "Grand colis : 1€",
+        "Stockage sécurisé",
+        "Retrait flexible",
+      ],
+    },
+
+    {
+      icon: "🚚",
+      title: "Livraison",
+      prices: [
+        "Déplacement : 5€ à 10€",
+        "Gros colis : +10€",
+        "Livraison rapide",
+        "Service local",
+      ],
+    },
+
+    {
+      icon: "🛒",
+      title: "Courses",
+      prices: [
+        "Déplacement : 5€ à 10€",
+        "Commande : +5€",
+        "Livraison à domicile",
+        "Gros volume possible",
+      ],
+    },
+
+    {
+      icon: "🤝",
+      title: "Leboncoin",
+      prices: [
+        "Déplacement : 5€ à 15€",
+        "Gros objet : +10€",
+        "Livraison possible",
+        "Service pratique",
+      ],
+    },
+
+    {
+      icon: "✈️",
+      title: "Outre-mer",
+      prices: [
+        "Déplacement : 10€ à 15€",
+        "Devis personnalisé",
+        "Aide douane",
+        "Frais La Poste selon poids",
+      ],
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white text-gray-900">
 
@@ -306,35 +363,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {[
-              {
-                icon: "📦",
-                title: "Point Relais",
-                prices: [
-                  "Petit colis : 0,50€",
-                  "Grand colis : 1€",
-                  "Stockage sécurisé",
-                ],
-              },
-              {
-                icon: "🚚",
-                title: "Livraison",
-                prices: [
-                  "Déplacement : 5€ à 10€",
-                  "Gros colis : +10€",
-                  "Livraison rapide",
-                ],
-              },
-              {
-                icon: "🛒",
-                title: "Courses",
-                prices: [
-                  "Déplacement : 5€ à 10€",
-                  "Commande : +5€",
-                  "Livraison à domicile",
-                ],
-              },
-            ].map((item, index) => (
+            {tarifs.map((item, index) => (
 
               <motion.div
                 key={index}
