@@ -518,45 +518,7 @@ export default function Home() {
         </div>
 
       )}
-{/* SUIVI DE COMMANDE */}
-<section className="py-20 bg-white px-6">
 
-  <div className="max-w-3xl mx-auto bg-gray-50 p-10 rounded-3xl shadow-xl border border-gray-200">
-
-    <h2 className="text-4xl font-black text-center text-blue-700 mb-6">
-      Suivi de commande
-    </h2>
-
-    <p className="text-center text-gray-600 mb-8">
-      Entrez votre numéro de colis et votre téléphone pour suivre votre commande.
-    </p>
-
-    <form className="space-y-5">
-
-      <input
-        type="text"
-        placeholder="Numéro de colis"
-        className="w-full p-4 rounded-2xl border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-
-      <input
-        type="tel"
-        placeholder="Téléphone"
-        className="w-full p-4 rounded-2xl border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-
-      <button
-        type="submit"
-        className="w-full bg-blue-700 hover:bg-blue-800 transition text-white py-4 rounded-2xl font-bold text-lg shadow-lg"
-      >
-        Rechercher ma commande
-      </button>
-
-    </form>
-
-  </div>
-
-</section>
       {/* AVIS */}
       <section id="avis" className="py-20 bg-gray-50">
 
