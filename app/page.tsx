@@ -569,7 +569,7 @@ if (loading) {
     </p>
 
     <img
-      src="/emplacement.jpg"
+      src="/emplacement.png"
       alt="Emplacement DK EXPRESS 26"
       className="rounded-3xl shadow-2xl w-full border border-gray-200"
     />
