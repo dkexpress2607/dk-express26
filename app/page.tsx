@@ -6,52 +6,52 @@ import { motion } from "framer-motion";
 export default function Home() {
   const [selectedService, setSelectedService] = useState<any>(null);
 
-  const services = [
-    {
-      title: "Point Relais",
-      description:
-        "Réception et retrait de colis Chronopost, Mondial Relay et particuliers.",
-      icon: "📦",
-      details:
-        "Vous pouvez commander vos colis sur Amazon, Vinted, Leboncoin ou n’importe quelle enseigne et mettre notre adresse comme point relais.",
-    },
+ const services = [
+  {
+    title: "Point Relais",
+    description:
+      "Réception et retrait de colis Chronopost, Mondial Relay et particuliers.",
+    icon: "📦",
+    details:
+      "Vous pouvez commander tout ce que vous souhaitez sur Amazon, Vinted, Leboncoin ou n’importe quelle autre enseigne et mettre notre adresse comme point relais. Vos colis sont directement livrés chez nous puis conservés en sécurité jusqu’à votre récupération. Nous acceptons les colis Chronopost, Mondial Relay ainsi que les remises de particuliers. Lors de votre commande, il vous suffit simplement de renseigner notre adresse ainsi que le nom du point relais afin que votre colis soit livré directement chez nous. Les frais de réception sont appliqués uniquement lors de la récupération du colis selon sa taille.",
+  },
 
-    {
-      title: "Livraison à domicile",
-      description:
-        "Livraison rapide de vos colis directement chez vous.",
-      icon: "🚚",
-      details:
-        "Nous pouvons livrer vos colis directement à domicile selon la distance.",
-    },
+  {
+    title: "Livraison à domicile",
+    description:
+      "Livraison rapide de vos colis directement chez vous.",
+    icon: "🚚",
+    details:
+      "Nous pouvons également livrer directement à domicile les colis réceptionnés dans notre point relais si vous n’avez pas la possibilité de vous déplacer. La livraison s’effectue selon la distance et les kilomètres à parcourir. Nous pouvons également transporter des colis volumineux ou lourds comme de l’électroménager, des meubles ou des objets encombrants.",
+  },
 
-    {
-      title: "Courses & Pharmacie",
-      description:
-        "Récupération de drives, courses et médicaments.",
-      icon: "🛒",
-      details:
-        "Nous récupérons vos courses, médicaments et achats puis nous vous les livrons.",
-    },
+  {
+    title: "Courses & Pharmacie",
+    description:
+      "Récupération de drives, courses et médicaments.",
+    icon: "🛒",
+    details:
+      "Vous pouvez commander vos courses en drive et nous nous chargeons de les récupérer pour vous. Il suffit simplement de nous transmettre l’adresse, les informations du drive ainsi que les coordonnées nécessaires à la récupération. Nous pouvons ensuite livrer directement vos courses à domicile. Nous pouvons aussi récupérer des médicaments déjà préparés en pharmacie, des fleurs, des achats en magasin ou toute autre commande tant que vous fournissez une autorisation ou un justificatif d’achat. Nous proposons également une aide pour les personnes souhaitant être accompagnées dans la commande de leurs courses.",
+  },
 
-    {
-      title: "Service Leboncoin",
-      description:
-        "Nous récupérons vos achats à votre place.",
-      icon: "🤝",
-      details:
-        "Nous pouvons récupérer vos achats Leboncoin et vous les livrer.",
-    },
+  {
+    title: "Service Leboncoin",
+    description:
+      "Nous récupérons vos achats à votre place.",
+    icon: "🤝",
+    details:
+      "Si vous ne pouvez pas vous déplacer pour récupérer un achat Leboncoin ou Marketplace, nous pouvons nous présenter directement à votre place afin de récupérer l’objet puis vous le livrer à domicile. Nous pouvons transporter aussi bien des petits objets que des équipements plus volumineux comme de l’électroménager ou du mobilier.",
+  },
 
-    {
-      title: "Envoi Outre-mer",
-      description:
-        "Expédition vers les DOM-TOM.",
-      icon: "✈️",
-      details:
-        "Nous réceptionnons puis réexpédions vos colis vers l’outre-mer.",
-    },
-  ];
+  {
+    title: "Envoi Outre-mer",
+    description:
+      "Expédition vers les DOM-TOM.",
+    icon: "✈️",
+    details:
+      "Nous pouvons réceptionner vos commandes Amazon, Vinted, pièces automobiles ou autres directement dans notre point relais puis préparer leur réexpédition vers les DOM-TOM. Nous pesons les colis, aidons à la déclaration douanière ou pouvons l’effectuer nous-mêmes, puis réalisons un devis avant l’envoi. Les frais d’expédition de La Poste restent à la charge du client selon le poids du colis. Nous garantissons transparence et honnêteté : si le coût réel est inférieur au devis prévu, la différence est remboursée au client.",
+  },
+];
 
   const tarifs = [
     {
