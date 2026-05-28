@@ -261,6 +261,76 @@ export default function Home() {
         </div>
 
       )}
+      {/* AVIS CLIENTS */}
+<section className="py-20 bg-gray-50">
+
+  <div className="max-w-6xl mx-auto px-6">
+
+    <h2 className="text-5xl font-black text-center text-blue-700 mb-14">
+      Avis Clients
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="bg-white p-8 rounded-3xl shadow-lg">
+        <div className="text-yellow-400 text-3xl mb-4">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p className="text-gray-700 text-lg mb-6">
+          Service très rapide et sérieux. Mon colis a été récupéré et livré sans problème.
+        </p>
+
+        <h3 className="font-bold text-xl">
+          — Sarah M.
+        </h3>
+      </div>
+
+      <div className="bg-white p-8 rounded-3xl shadow-lg">
+        <div className="text-yellow-400 text-3xl mb-4">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p className="text-gray-700 text-lg mb-6">
+          Très pratique pour les courses et les colis. Je recommande fortement.
+        </p>
+
+        <h3 className="font-bold text-xl">
+          — Jaylan Y.
+        </h3>
+      </div>
+
+      <div className="bg-white p-8 rounded-3xl shadow-lg">
+        <div className="text-yellow-400 text-3xl mb-4">
+          ⭐⭐⭐⭐⭐
+        </div>
+
+        <p className="text-gray-700 text-lg mb-6">
+          Super service pour l’outre-mer. Expédition rapide et très professionnel.
+        </p>
+
+        <h3 className="font-bold text-xl">
+          — Noura A.
+        </h3>
+      </div>
+
+    </div>
+
+    <div className="text-center mt-12">
+
+      <a
+        href="https://maps.app.goo.gl/zyrhRQWwGUW8icj68"
+        target="_blank"
+        className="bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-800 transition"
+      >
+        Laisser un avis Google
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 {/* FOOTER */}
 <footer className="bg-gray-100 py-6 mt-10 border-t">
 
