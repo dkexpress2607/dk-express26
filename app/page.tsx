@@ -397,7 +397,11 @@ if (loading) {
               rows={4}
               required
             />
-
+<input
+  type="hidden"
+  name="_autoresponse"
+  value="Bonjour, votre demande a bien été reçue par DK EXPRESS 26. Nous vous contacterons rapidement afin de confirmer la prise en charge de votre demande. Merci pour votre confiance."
+/>
             <button
               type="submit"
               className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-xl font-semibold w-full"
@@ -471,7 +475,11 @@ if (loading) {
               className="w-full p-4 rounded-xl text-black"
               rows={4}
             />
-
+<input
+  type="hidden"
+  name="_autoresponse"
+  value="Bonjour, votre demande a bien été reçue par DK EXPRESS 26. Nous vous contacterons rapidement afin de confirmer la prise en charge de votre demande. Merci pour votre confiance."
+/>
             <button
               type="submit"
               className="w-full bg-orange-500 hover:bg-orange-600 transition py-4 rounded-xl font-bold text-lg"
