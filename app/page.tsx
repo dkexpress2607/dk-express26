@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -25,269 +25,222 @@ export default function Home() {
   const services: Service[] = [
     {
       title: "Point Relais",
-      description:
-        "Réception et retrait de colis Chronopost, Mondial Relay et particuliers.",
+      description: "Réception et retrait de colis.",
       icon: "📦",
-      details:
-        "Vous pouvez commander tout ce que vous souhaitez sur Amazon, Vinted, Leboncoin ou n’importe quelle autre enseigne et mettre notre adresse comme point relais. Vos colis sont directement livrés chez nous puis conservés en sécurité jusqu’à votre récupération. Nous acceptons les colis Chronopost, Mondial Relay ainsi que les remises de particuliers. Lors de votre commande, il vous suffit simplement de renseigner notre adresse ainsi que le nom du point relais afin que votre colis soit livré directement chez nous. Les frais de réception sont appliqués uniquement lors de la récupération du colis selon sa taille.",
+      details: "Service de réception sécurisé.",
     },
 
     {
-      title: "Livraison à domicile",
-      description: "Livraison rapide de vos colis directement chez vous.",
-      icon: "🚚",
-      details:
-        "Nous pouvons également livrer directement à domicile les colis réceptionnés dans notre point relais si vous n’avez pas la possibilité de vous déplacer. La livraison s’effectue selon la distance et les kilomètres à parcourir. Nous pouvons également transporter des colis volumineux ou lourds comme de l’électroménager, des meubles ou des objets encombrants.",
-    },
-
-    {
-      title: "Courses & Pharmacie",
-      description:
-        "Récupération de drives, courses et médicaments.",
-      icon: "🛒",
-      details:
-        "Vous pouvez commander vos courses en drive et nous nous chargeons de les récupérer pour vous. Il suffit simplement de nous transmettre l’adresse, les informations du drive ainsi que les coordonnées nécessaires à la récupération. Nous pouvons ensuite livrer directement vos courses à domicile. Nous pouvons aussi récupérer des médicaments déjà préparés en pharmacie, des fleurs, des achats en magasin ou toute autre commande tant que vous fournissez une autorisation ou un justificatif d’achat. Nous proposons également une aide pour les personnes souhaitant être accompagnées dans la commande de leurs courses.",
-    },
-
-    {
-      title: "Service Leboncoin",
-      description:
-        "Nous récupérons vos achats à votre place.",
-      icon: "🤝",
-      details:
-        "Si vous ne pouvez pas vous déplacer pour récupérer un achat Leboncoin ou Marketplace, nous pouvons nous présenter directement à votre place afin de récupérer l’objet puis vous le livrer à domicile. Nous pouvons transporter aussi bien des petits objets que des équipements plus volumineux comme de l’électroménager ou du mobilier.",
-    },
-
-    {
-      title: "Envoi Outre-mer",
-      description: "Expédition vers les DOM-TOM.",
-      icon: "✈️",
-      details:
-        "Nous pouvons réceptionner vos commandes Amazon, Vinted, pièces automobiles ou autres directement dans notre point relais puis préparer leur réexpédition vers les DOM-TOM. Nous pesons les colis, aidons à la déclaration douanière ou pouvons l’effectuer nous-mêmes, puis réalisons un devis avant l’envoi. Les frais d’expédition de La Poste restent à la charge du client selon le poids du colis. Nous garantissons transparence et honnêteté : si le coût réel est inférieur au devis prévu, la différence est remboursée au client.",
-    },
-  ];
-
-  const tarifs = [
-    {
-      icon: "📦",
-      title: "Point Relais",
-      prices: [
-        "Petit colis : 0,50€",
-        "Grand colis : 1€",
-        "Stockage sécurisé",
-        "Retrait flexible",
-      ],
-    },
-
-    {
-      icon: "🚚",
       title: "Livraison",
-      prices: [
-        "Déplacement : 5€ à 10€",
-        "Gros colis : +10€",
-        "Livraison rapide",
-        "Service local",
-      ],
+      description: "Livraison rapide à domicile.",
+      icon: "🚚",
+      details: "Livraison locale rapide.",
     },
 
     {
-      icon: "🛒",
       title: "Courses",
-      prices: [
-        "Déplacement : 5€ à 10€",
-        "Commande : +5€",
-        "Livraison à domicile",
-        "Gros volume possible",
-      ],
+      description: "Courses et pharmacie.",
+      icon: "🛒",
+      details: "Récupération et livraison.",
     },
 
     {
-      icon: "🤝",
       title: "Leboncoin",
-      prices: [
-        "Déplacement : 5€ à 15€",
-        "Gros objet : +10€",
-        "Livraison possible",
-        "Service pratique",
-      ],
+      description: "Récupération d’achats.",
+      icon: "🤝",
+      details: "Nous récupérons vos achats.",
     },
 
     {
-      icon: "✈️",
       title: "Outre-mer",
-      prices: [
-        "Déplacement : 10€ à 15€",
-        "Devis personnalisé",
-        "Aide douane",
-        "Frais La Poste selon poids",
-      ],
+      description: "Expédition DOM-TOM.",
+      icon: "✈️",
+      details: "Envoi sécurisé vers les DOM-TOM.",
     },
   ];
 
   if (loading) {
     return (
-      <div className="fixed inset-0 bg-[#0B1E5B] flex flex-col items-center justify-center text-white z-[9999]">
-        <div className="animate-pulse">
-          <h1 className="text-5xl md:text-7xl font-black tracking-wider">
-            DK EXPRESS 26
-          </h1>
-        </div>
-
-        <div className="mt-8 flex gap-3">
-          <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce"></div>
-          <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce delay-150"></div>
-          <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce delay-300"></div>
-        </div>
-
-        <p className="mt-6 text-blue-100 text-lg">
-          DKChargement...
-        </p>
+      <div className="fixed inset-0 bg-[#0B1E5B] flex items-center justify-center z-50">
+        <h1 className="text-white text-5xl font-black animate-pulse">
+          DK EXPRESS 26
+        </h1>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen w-full bg-[#f4f7fb] text-gray-900 overflow-x-hidden overflow-y-auto">
+    <main className="w-full min-h-screen overflow-x-hidden bg-[#f4f7fb]">
+
       {/* NAVBAR */}
-      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-white/70 border-b border-white/20 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <header className="fixed top-0 left-0 w-full bg-white shadow-md z-40">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+
           <h1 className="text-2xl font-black text-blue-700">
             DK EXPRESS 26
           </h1>
 
-          <nav className="hidden md:flex items-center gap-8 font-semibold text-gray-700">
-            <a href="#accueil" className="hover:text-blue-700 transition">
-              Accueil
-            </a>
-
-            <a href="#services" className="hover:text-blue-700 transition">
-              Services
-            </a>
-
-            <a href="#tarifs" className="hover:text-blue-700 transition">
-              Tarifs
-            </a>
-
-            <a href="#reservation" className="hover:text-blue-700 transition">
-              Réservation
-            </a>
-
-            <a href="#avis" className="hover:text-blue-700 transition">
-              Avis
-            </a>
-
-            <a href="#contact" className="hover:text-blue-700 transition">
-              Contact
-            </a>
+          <nav className="hidden md:flex gap-8 font-semibold">
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
           </nav>
+
         </div>
       </header>
 
       {/* HERO */}
-      <motion.section
-        id="accueil"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 text-white pt-36 pb-20 px-6 overflow-hidden"
-      >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center min-h-[auto]">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-black leading-tight mb-6">
-              DK EXPRESS 26
-            </h1>
+      <section className="pt-32 pb-20 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-800 text-white">
 
-            <p className="text-xl mb-6 text-blue-100">
-              Votre point relais et service de livraison local rapide,
-              fiable et pratique.
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+          >
+
+            <h2 className="text-5xl font-black mb-6">
+              Livraison rapide & point relais
+            </h2>
+
+            <p className="text-blue-100 text-xl mb-8">
+              Service local fiable et rapide.
             </p>
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-wrap gap-4 mb-8">
 
-  <div className="flex flex-wrap gap-4">
+              <button className="bg-orange-500 hover:bg-orange-600 transition px-8 py-4 rounded-2xl font-bold">
+                Commander
+              </button>
 
-    <motion.button
-      whileHover={{
-        scale: 1.08,
-        boxShadow: "0px 0px 25px rgba(249,115,22,0.8)",
-      }}
-      whileTap={{ scale: 0.96 }}
-      className="
-        relative overflow-hidden
-        bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400
-        hover:from-orange-400 hover:to-yellow-300
-        transition-all duration-300
-        px-8 py-4
-        rounded-2xl
-        font-black
-        text-white
-        shadow-[0_0_25px_rgba(249,115,22,0.45)]
-      "
-    >
-      <span className="relative z-10">
-        Commander une livraison
-      </span>
+              <button className="border border-white px-8 py-4 rounded-2xl font-bold">
+                Contact
+              </button>
 
-      <div className="absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition"></div>
-    </motion.button>
+            </div>
 
-    <motion.button
-      whileHover={{
-        scale: 1.08,
-        boxShadow: "0px 0px 25px rgba(255,255,255,0.35)",
-      }}
-      whileTap={{ scale: 0.96 }}
-      className="
-        relative overflow-hidden
-        border border-white/30
-        bg-white/10 backdrop-blur-xl
-        px-8 py-4
-        rounded-2xl
-        font-bold
-        text-white
-        transition-all duration-300
-        hover:bg-white
-        hover:text-blue-700
-        shadow-xl
-      "
-    >
-      <span className="relative z-10">
-        Nous contacter
-      </span>
-    </motion.button>
+            <img
+              src="/france-outremer.png"
+              alt="France Outre Mer"
+              className="w-full rounded-3xl shadow-2xl"
+            />
 
-  </div>
-
-  {/* IMAGE FRANCE + OUTRE-MER */}
-  <div className="w-full">
-    <img
-      src="/france-outremer.png"
-      alt="Livraison France et Outre-mer"
-      className="w-full max-w-xl rounded-3xl shadow-2xl border border-white/20"
-    />
-  </div>
-
-</div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-           className="bg-white rounded-3xl p-6 shadow-2xl overflow-hidden"
+            className="bg-white p-6 rounded-3xl shadow-2xl"
           >
+
             <img
               src="/logo.png"
-              alt="DK Express 26"
-              className="rounded-2xl w-full h-auto object-contain"
+              alt="Logo"
+              className="w-full h-auto object-contain"
             />
+
           </motion.div>
+
         </div>
-      </motion.section>
-    </div>
+
+      </section>
+
+      {/* SERVICES */}
+      <section
+        id="services"
+        className="py-20 px-6 bg-gray-50"
+      >
+
+        <div className="max-w-7xl mx-auto">
+
+          <h2 className="text-5xl font-black text-center text-blue-700 mb-14">
+            Nos Services
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.04 }}
+                onClick={() => setSelectedService(service)}
+                className="bg-white p-6 rounded-3xl shadow-lg cursor-pointer"
+              >
+
+                <div className="text-5xl mb-4">
+                  {service.icon}
+                </div>
+
+                <h3 className="text-2xl font-black text-blue-700 mb-3">
+                  {service.title}
+                </h3>
+
+                <p className="text-gray-600">
+                  {service.description}
+                </p>
+
+              </motion.div>
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* POPUP */}
+      {selectedService && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+
+          <div className="bg-white rounded-3xl p-8 max-w-xl w-full relative">
+
+            <button
+              onClick={() => setSelectedService(null)}
+              className="absolute top-4 right-4 text-2xl"
+            >
+              ✕
+            </button>
+
+            <div className="text-6xl mb-4">
+              {selectedService.icon}
+            </div>
+
+            <h2 className="text-3xl font-black text-blue-700 mb-4">
+              {selectedService.title}
+            </h2>
+
+            <p className="text-gray-700">
+              {selectedService.details}
+            </p>
+
+          </div>
+
+        </div>
+      )}
+
+      {/* FOOTER */}
+      <footer
+        id="contact"
+        className="bg-white border-t py-10"
+      >
+
+        <div className="max-w-7xl mx-auto px-6 text-center">
+
+          <h3 className="text-3xl font-black text-blue-700 mb-4">
+            DK EXPRESS 26
+          </h3>
+
+          <p className="text-gray-600 mb-4">
+            Service local • Livraison • Point relais
+          </p>
+
+          <p className="text-gray-500 text-sm">
+            © 2026 DK EXPRESS 26
+          </p>
+
+        </div>
+
+      </footer>
+
+    </main>
   );
 }
