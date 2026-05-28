@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState<any>(null);
@@ -56,24 +57,58 @@ export default function Home() {
     <div className="min-h-screen bg-white text-gray-900">
 
       {/* HERO */}
-      <section className="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20 px-6">
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20 px-6"
+      >
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+          >
 
-            <h1 className="text-5xl font-black leading-tight mb-6">
+            <h1 className="text-5xl md:text-6xl font-black leading-tight mb-6">
               DK EXPRESS 26
             </h1>
 
-            <p className="text-xl mb-6">
+            <p className="text-xl mb-6 text-blue-100">
               Votre point relais et service de livraison local rapide,
               fiable et pratique.
             </p>
 
-          </div>
+            <div className="flex flex-wrap gap-4">
 
-          <div className="bg-white rounded-3xl p-6 shadow-2xl">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-2xl font-bold shadow-lg"
+              >
+                Commander une livraison
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-blue-700 transition"
+              >
+                Nous contacter
+              </motion.button>
+
+            </div>
+
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="bg-white rounded-3xl p-6 shadow-2xl"
+          >
 
             <img
               src="/logo.png"
@@ -81,11 +116,11 @@ export default function Home() {
               className="rounded-2xl"
             />
 
-          </div>
+          </motion.div>
 
         </div>
 
-      </section>
+      </motion.section>
 
       {/* SERVICES */}
       <section className="py-20 px-6">
@@ -102,10 +137,11 @@ export default function Home() {
 
           {services.map((service, index) => (
 
-            <div
+            <motion.div
               key={index}
               onClick={() => setSelectedService(service)}
-              className="bg-gray-50 rounded-3xl p-6 shadow hover:shadow-xl transition cursor-pointer hover:scale-105"
+              whileHover={{ scale: 1.05 }}
+              className="bg-gray-50 rounded-3xl p-6 shadow hover:shadow-xl transition cursor-pointer"
             >
 
               <div className="text-5xl mb-4">
@@ -120,7 +156,7 @@ export default function Home() {
                 {service.description}
               </p>
 
-            </div>
+            </motion.div>
 
           ))}
 
@@ -258,122 +294,80 @@ export default function Home() {
         </div>
 
       </section>
-{/* TARIFS */}
-<section className="py-20 bg-gray-50 px-6">
 
-  <div className="max-w-6xl mx-auto">
+      {/* TARIFS */}
+      <section className="py-20 bg-gray-50 px-6">
 
-    <h2 className="text-5xl font-black text-center text-blue-700 mb-14">
-      Nos Tarifs
-    </h2>
+        <div className="max-w-6xl mx-auto">
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-5xl font-black text-center text-blue-700 mb-14">
+            Nos Tarifs
+          </h2>
 
-      {/* POINT RELAIS */}
-      <div className="bg-white rounded-3xl p-8 shadow-lg">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <div className="text-5xl mb-4">📦</div>
+            {[
+              {
+                icon: "📦",
+                title: "Point Relais",
+                prices: [
+                  "Petit colis : 0,50€",
+                  "Grand colis : 1€",
+                  "Stockage sécurisé",
+                ],
+              },
+              {
+                icon: "🚚",
+                title: "Livraison",
+                prices: [
+                  "Déplacement : 5€ à 10€",
+                  "Gros colis : +10€",
+                  "Livraison rapide",
+                ],
+              },
+              {
+                icon: "🛒",
+                title: "Courses",
+                prices: [
+                  "Déplacement : 5€ à 10€",
+                  "Commande : +5€",
+                  "Livraison à domicile",
+                ],
+              },
+            ].map((item, index) => (
 
-        <h3 className="text-2xl font-black mb-4 text-blue-700">
-          Point Relais
-        </h3>
+              <motion.div
+                key={index}
+                whileHover={{ y: -10 }}
+                className="bg-white rounded-3xl p-8 shadow-lg"
+              >
 
-        <ul className="space-y-3 text-gray-700">
+                <div className="text-5xl mb-4">
+                  {item.icon}
+                </div>
 
-          <li>• Petit colis : 0,50€</li>
-          <li>• Grand colis : 1€</li>
-          <li>• Stockage sécurisé</li>
-          <li>• Retrait flexible</li>
+                <h3 className="text-2xl font-black mb-4 text-blue-700">
+                  {item.title}
+                </h3>
 
-        </ul>
+                <ul className="space-y-3 text-gray-700">
 
-      </div>
+                  {item.prices.map((price, i) => (
+                    <li key={i}>• {price}</li>
+                  ))}
 
-      {/* LIVRAISON */}
-      <div className="bg-white rounded-3xl p-8 shadow-lg">
+                </ul>
 
-        <div className="text-5xl mb-4">🚚</div>
+              </motion.div>
 
-        <h3 className="text-2xl font-black mb-4 text-blue-700">
-          Livraison à domicile
-        </h3>
+            ))}
 
-        <ul className="space-y-3 text-gray-700">
+          </div>
 
-          <li>• Déplacement : 5€ à 10€</li>
-          <li>• Gros colis : +10€</li>
-          <li>• Livraison rapide</li>
-          <li>• Service local</li>
+        </div>
 
-        </ul>
+      </section>
 
-      </div>
-
-      {/* COURSES */}
-      <div className="bg-white rounded-3xl p-8 shadow-lg">
-
-        <div className="text-5xl mb-4">🛒</div>
-
-        <h3 className="text-2xl font-black mb-4 text-blue-700">
-          Courses & Pharmacie
-        </h3>
-
-        <ul className="space-y-3 text-gray-700">
-
-          <li>• Déplacement : 5€ à 10€</li>
-          <li>• Gros volume : +5€ à 10€</li>
-          <li>• Commande à votre place : +5€</li>
-          <li>• Livraison à domicile</li>
-
-        </ul>
-
-      </div>
-
-      {/* LEBONCOIN */}
-      <div className="bg-white rounded-3xl p-8 shadow-lg">
-
-        <div className="text-5xl mb-4">🤝</div>
-
-        <h3 className="text-2xl font-black mb-4 text-blue-700">
-          Service Leboncoin
-        </h3>
-
-        <ul className="space-y-3 text-gray-700">
-
-          <li>• Déplacement : 5€ à 15€</li>
-          <li>• Gros objet : +10€</li>
-          <li>• Livraison possible</li>
-          <li>• Service pratique</li>
-
-        </ul>
-
-      </div>
-
-      {/* OUTRE MER */}
-      <div className="bg-white rounded-3xl p-8 shadow-lg">
-
-        <div className="text-5xl mb-4">✈️</div>
-
-        <h3 className="text-2xl font-black mb-4 text-blue-700">
-          Envoi Outre-mer
-        </h3>
-
-        <ul className="space-y-3 text-gray-700">
-
-          <li>• Déplacement : 10€ à 15€</li>
-          <li>• Devis personnalisé</li>
-          <li>• Aide déclaration douane</li>
-          <li>• Frais La Poste selon poids</li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
       {/* GOOGLE MAPS */}
       <section className="py-20 bg-white text-black">
 
@@ -405,7 +399,11 @@ export default function Home() {
 
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
 
-          <div className="bg-white p-8 rounded-3xl max-w-2xl w-full relative shadow-2xl">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="bg-white p-8 rounded-3xl max-w-2xl w-full relative shadow-2xl"
+          >
 
             <button
               onClick={() => setSelectedService(null)}
@@ -426,7 +424,7 @@ export default function Home() {
               {selectedService.details}
             </p>
 
-          </div>
+          </motion.div>
 
         </div>
 
