@@ -270,51 +270,7 @@ export default function Home() {
       Avis Clients
     </h2>
 
-    <div className="grid md:grid-cols-3 gap-8">
-
-      <div className="bg-white p-8 rounded-3xl shadow-lg">
-        <div className="text-yellow-400 text-3xl mb-4">
-          ⭐⭐⭐⭐⭐
-        </div>
-
-        <p className="text-gray-700 text-lg mb-6">
-          Service très rapide et sérieux. Mon colis a été récupéré et livré sans problème.
-        </p>
-
-        <h3 className="font-bold text-xl">
-          — Sarah M.
-        </h3>
-      </div>
-
-      <div className="bg-white p-8 rounded-3xl shadow-lg">
-        <div className="text-yellow-400 text-3xl mb-4">
-          ⭐⭐⭐⭐⭐
-        </div>
-
-        <p className="text-gray-700 text-lg mb-6">
-          Très pratique pour les courses et les colis. Je recommande fortement.
-        </p>
-
-        <h3 className="font-bold text-xl">
-          — Jaylan Y.
-        </h3>
-      </div>
-
-      <div className="bg-white p-8 rounded-3xl shadow-lg">
-        <div className="text-yellow-400 text-3xl mb-4">
-          ⭐⭐⭐⭐⭐
-        </div>
-
-        <p className="text-gray-700 text-lg mb-6">
-          Super service pour l’outre-mer. Expédition rapide et très professionnel.
-        </p>
-
-        <h3 className="font-bold text-xl">
-          — Noura A.
-        </h3>
-      </div>
-
-    </div>
+    <div
 
     <div className="text-center mt-12">
 
