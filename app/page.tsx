@@ -140,7 +140,7 @@ export default function Home() {
         </div>
 
         <p className="mt-6 text-blue-100 text-lg">
-          Chargement...
+          DKChargement...
         </p>
       </div>
     );
@@ -206,43 +206,72 @@ export default function Home() {
               fiable et pratique.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <motion.button
-                whileHover={{
-                  scale: 1.08,
-                  boxShadow: "0px 0px 25px rgba(249,115,22,0.8)",
-                }}
-                whileTap={{ scale: 0.96 }}
-                className="relative overflow-hidden bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400 hover:from-orange-400 hover:to-yellow-300 transition-all duration-300 px-8 py-4 rounded-2xl font-black text-white shadow-[0_0_25px_rgba(249,115,22,0.45)]"
-              >
-                <span className="relative z-10">
-                  Commander une livraison
-                </span>
+            <div className="flex flex-col gap-6">
 
-                <div className="absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition"></div>
-              </motion.button>
+  <div className="flex flex-wrap gap-4">
 
-              <motion.button
-                whileHover={{
-                  scale: 1.08,
-                  boxShadow: "0px 0px 25px rgba(255,255,255,0.35)",
-                }}
-                whileTap={{ scale: 0.96 }}
-                className="relative overflow-hidden border border-white/30 bg-white/10 backdrop-blur-xl px-8 py-4 rounded-2xl font-bold text-white transition-all duration-300 hover:bg-white hover:text-blue-700 shadow-xl"
-              >
-                <span className="relative z-10">
-                  Nous contacter
-                </span>
-              </motion.button>
-            </div>
+    <motion.button
+      whileHover={{
+        scale: 1.08,
+        boxShadow: "0px 0px 25px rgba(249,115,22,0.8)",
+      }}
+      whileTap={{ scale: 0.96 }}
+      className="
+        relative overflow-hidden
+        bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400
+        hover:from-orange-400 hover:to-yellow-300
+        transition-all duration-300
+        px-8 py-4
+        rounded-2xl
+        font-black
+        text-white
+        shadow-[0_0_25px_rgba(249,115,22,0.45)]
+      "
+    >
+      <span className="relative z-10">
+        Commander une livraison
+      </span>
 
-            <div className="mt-10">
-              <img
-                src="/france-outremer.png"
-                alt="Livraison France et Outre-mer"
-                className="w-full max-w-xl rounded-3xl shadow-2xl border border-white/20"
-              />
-            </div>
+      <div className="absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition"></div>
+    </motion.button>
+
+    <motion.button
+      whileHover={{
+        scale: 1.08,
+        boxShadow: "0px 0px 25px rgba(255,255,255,0.35)",
+      }}
+      whileTap={{ scale: 0.96 }}
+      className="
+        relative overflow-hidden
+        border border-white/30
+        bg-white/10 backdrop-blur-xl
+        px-8 py-4
+        rounded-2xl
+        font-bold
+        text-white
+        transition-all duration-300
+        hover:bg-white
+        hover:text-blue-700
+        shadow-xl
+      "
+    >
+      <span className="relative z-10">
+        Nous contacter
+      </span>
+    </motion.button>
+
+  </div>
+
+  {/* IMAGE FRANCE + OUTRE-MER */}
+  <div className="w-full">
+    <img
+      src="/france-outremer.png"
+      alt="Livraison France et Outre-mer"
+      className="w-full max-w-xl rounded-3xl shadow-2xl border border-white/20"
+    />
+  </div>
+
+</div>
           </motion.div>
 
           <motion.div
