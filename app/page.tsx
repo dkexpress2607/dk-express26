@@ -1,11 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState<any>(null);
+const [loading, setLoading] = useState(true);
 
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setLoading(false);
+  }, 2500);
+
+  return () => clearTimeout(timer);
+}, []);
  const services = [
   {
     title: "Point Relais",
@@ -109,7 +117,33 @@ export default function Home() {
       ],
     },
   ];
+if (loading) {
+  return (
+    <div className="fixed inset-0 bg-[#0B1E5B] flex flex-col items-center justify-center text-white z-[9999]">
 
+      <div className="animate-pulse">
+
+        <h1 className="text-5xl md:text-7xl font-black tracking-wider">
+          DK EXPRESS 26
+        </h1>
+
+      </div>
+
+      <div className="mt-8 flex gap-3">
+
+        <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce"></div>
+        <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce delay-150"></div>
+        <div className="w-4 h-4 bg-orange-500 rounded-full animate-bounce delay-300"></div>
+
+      </div>
+
+      <p className="mt-6 text-blue-100 text-lg">
+        Chargement...
+      </p>
+
+    </div>
+  );
+}
   return (
     <div className="min-h-screen bg-white text-gray-900">
 
