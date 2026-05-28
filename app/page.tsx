@@ -555,7 +555,28 @@ if (loading) {
         </div>
 
       </section>
+{/* PHOTO EMPLACEMENT */}
+<section className="py-20 bg-gray-50 px-6">
 
+  <div className="max-w-5xl mx-auto text-center">
+
+    <h2 className="text-4xl font-black text-blue-700 mb-6">
+      Trouver DK EXPRESS 26
+    </h2>
+
+    <p className="text-gray-600 mb-10 text-lg">
+      Voici l’emplacement exact pour récupérer vos colis et déposer vos commandes.
+    </p>
+
+    <img
+      src="/emplacement.jpg"
+      alt="Emplacement DK EXPRESS 26"
+      className="rounded-3xl shadow-2xl w-full border border-gray-200"
+    />
+
+  </div>
+
+</section>
       {/* POPUP */}
       {selectedService && (
 
