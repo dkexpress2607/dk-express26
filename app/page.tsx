@@ -261,51 +261,52 @@ export default function Home() {
         </div>
 
       )}
+
       {/* AVIS CLIENTS */}
-<section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50">
 
-  <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
 
-    <h2 className="text-5xl font-black text-center text-blue-700 mb-14">
-      Avis Clients
-    </h2>
+          <h2 className="text-5xl font-black text-center text-blue-700 mb-14">
+            Avis Clients
+          </h2>
 
-    <div
+          <div className="text-center">
 
-    <div className="text-center mt-12">
+            <a
+              href="https://maps.app.goo.gl/zyrhRQWwGUW8icj68"
+              target="_blank"
+              className="bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-800 transition"
+            >
+              Laisser un avis Google
+            </a>
 
-      <a
-        href="https://maps.app.goo.gl/zyrhRQWwGUW8icj68"
-        target="_blank"
-        className="bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-800 transition"
-      >
-        Laisser un avis Google
-      </a>
+          </div>
 
-    </div>
+        </div>
 
-  </div>
+      </section>
 
-</section>
-{/* FOOTER */}
-<footer className="bg-gray-100 py-6 mt-10 border-t">
+      {/* FOOTER */}
+      <footer className="bg-gray-100 py-6 mt-10 border-t">
 
-  <div className="max-w-6xl mx-auto px-6 text-center text-gray-600">
+        <div className="max-w-6xl mx-auto px-6 text-center text-gray-600">
 
-    <p className="mb-3">
-      © 2026 DK EXPRESS 26 - Tous droits réservés
-    </p>
+          <p className="mb-3">
+            © 2026 DK EXPRESS 26 - Tous droits réservés
+          </p>
 
-    <a
-      href="/legal"
-      className="text-blue-700 font-semibold hover:underline"
-    >
-      Mentions légales • Conditions générales • Confidentialité
-    </a>
+          <a
+            href="/legal"
+            className="text-blue-700 font-semibold hover:underline"
+          >
+            Mentions légales • Conditions générales • Confidentialité
+          </a>
 
-  </div>
+        </div>
 
-</footer>
+      </footer>
+
     </div>
   );
 }
