@@ -373,7 +373,13 @@ if (loading) {
               className="w-full p-4 rounded-xl border text-black"
               required
             />
-
+<input
+  type="email"
+  name="email"
+  placeholder="Votre adresse email"
+  className="w-full p-4 rounded-xl border text-black"
+  required
+/>
             <input
               type="text"
               name="Adresse"
@@ -440,7 +446,13 @@ if (loading) {
               className="w-full p-4 rounded-xl text-black"
               required
             />
-
+<input
+  type="email"
+  name="email"
+  placeholder="Votre adresse email"
+  className="w-full p-4 rounded-xl border text-black"
+  required
+/>
             <input
               type="tel"
               name="Téléphone"
