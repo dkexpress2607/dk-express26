@@ -225,12 +225,17 @@ if (loading) {
     className="w-full max-w-xl rounded-3xl shadow-2xl border border-white/20"
   />
 </div>
-              <motion.button
+<motion.button
   whileHover={{
     scale: 1.08,
     boxShadow: "0px 0px 25px rgba(249,115,22,0.8)",
   }}
   whileTap={{ scale: 0.96 }}
+  onClick={() => {
+    document
+      .getElementById("reservation")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }}
   className="
     relative overflow-hidden
     bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400
@@ -243,13 +248,11 @@ if (loading) {
     shadow-[0_0_25px_rgba(249,115,22,0.45)]
   "
 >
-
   <span className="relative z-10">
     Commander une livraison
   </span>
 
   <div className="absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition"></div>
-
 </motion.button>
 
               <motion.button
