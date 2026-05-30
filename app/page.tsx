@@ -818,6 +818,76 @@ if (loading) {
   </div>
 
 </section>
+{/* CONTACT */}
+<section id="contact" className="py-20 bg-blue-900 text-white px-6">
+
+  <div className="max-w-4xl mx-auto text-center">
+
+    <h2 className="text-5xl font-black mb-8">
+      Contactez-nous
+    </h2>
+
+    <p className="text-blue-100 text-lg mb-10">
+      Une question ? Une livraison ? Contactez-nous directement.
+    </p>
+
+    <div className="grid md:grid-cols-2 gap-6">
+
+      <a
+        href="tel:0667939316"
+        className="bg-white/10 p-6 rounded-3xl hover:bg-white/20 transition"
+      >
+        <div className="text-4xl mb-3">📞</div>
+        <h3 className="font-bold text-xl">Téléphone</h3>
+        <p>06 67 93 93 16</p>
+      </a>
+
+      <a
+        href="https://wa.me/33667939316"
+        target="_blank"
+        className="bg-white/10 p-6 rounded-3xl hover:bg-white/20 transition"
+      >
+        <div className="text-4xl mb-3">💬</div>
+        <h3 className="font-bold text-xl">WhatsApp</h3>
+        <p>Discuter directement</p>
+      </a>
+
+      <a
+        href="mailto:dkexpress2607@gmail.com"
+        className="bg-white/10 p-6 rounded-3xl hover:bg-white/20 transition"
+      >
+        <div className="text-4xl mb-3">📧</div>
+        <h3 className="font-bold text-xl">Email</h3>
+        <p>dkexpress2607@gmail.com</p>
+      </a>
+
+      <a
+        href="https://www.instagram.com/dkexpress26"
+        target="_blank"
+        className="bg-white/10 p-6 rounded-3xl hover:bg-white/20 transition"
+      >
+        <div className="text-4xl mb-3">📸</div>
+        <h3 className="font-bold text-xl">Instagram</h3>
+        <p>@dkexpress26</p>
+      </a>
+
+    </div>
+
+    <div className="mt-10 space-y-4">
+
+      <p>
+        <strong>Facebook :</strong> DKEXPRESS DROME
+      </p>
+
+      <p>
+        <strong>Leboncoin :</strong> dkexpress2607
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
      {/* FOOTER */}
 <footer
   id="contact"
@@ -910,6 +980,13 @@ if (loading) {
   </div>
 
 </footer>
+<a
+  href="https://wa.me/33667939316"
+  target="_blank"
+  className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-3xl"
+>
+  💬
+</a>
     </div>
   );
 }
